@@ -5,7 +5,7 @@ import {HomeComponent} from './components/home/home.component';
 import {TerminalComponent} from './components/terminal/terminal.component';
 import {RegisterComponent} from './components/register/register.component';
 import {PasswordComponent} from './components/password/password.component';
-import {AuthGuard} from './shared/guard/auth.guard';
+import {AuthGuard} from './services/guard/auth.guard';
 
 const routes: Routes = [
     {
