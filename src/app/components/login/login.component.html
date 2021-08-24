@@ -4,11 +4,11 @@
     <div class="authBlock">
       <h3>Sign In</h3>
       <div class="formGroup">
-        <input type="text" [ngModel]="name" class="formControl" placeholder="Username" required>
+        <input type="text" [(ngModel)]="name" class="formControl" placeholder="Username" required>
       </div>
 
       <div class="formGroup">
-        <input type="password" [ngModel]="password" class="formControl" placeholder="Password" required>
+        <input type="password" [(ngModel)]="password" class="formControl" placeholder="Password" required>
       </div>
 
       <!-- Calling SignIn Api from AuthService -->
@@ -34,7 +34,7 @@
     </div>
 
     <div class="redirectToLogin">
-      <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+      <span>Don't have an account?<span class="redirect" routerLink="/register"> Sign Up</span></span>
     </div>
 
   </div>

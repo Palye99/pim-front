@@ -11,11 +11,17 @@ import {environment} from '../environments/environment';
 import {AuthService} from './services/auth';
 import { RegisterComponent } from './components/register/register.component';
 import {FormsModule} from '@angular/forms';
+import {LoginComponent} from './components/login/login.component';
+import { PasswordComponent } from './components/password/password.component';
+import { EmailComponent } from './components/email/email.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    PasswordComponent,
+    EmailComponent
   ],
   imports: [
     BrowserModule,
