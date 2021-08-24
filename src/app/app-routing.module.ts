@@ -6,6 +6,7 @@ import {TerminalComponent} from './components/terminal/terminal.component';
 import {RegisterComponent} from './components/register/register.component';
 import {PasswordComponent} from './components/password/password.component';
 import {AuthGuard} from './services/guard/auth.guard';
+import {EmailComponent} from './components/email/email.component';
 
 const routes: Routes = [
     {
@@ -16,6 +17,10 @@ const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent
+    },
+    {
+        path: 'email',
+        component: EmailComponent
     },
     {
         path: 'register',

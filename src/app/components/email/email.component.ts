@@ -13,7 +13,7 @@ export class EmailComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-    if (this.authService.userData) {
+    if (this.authService && this.authService.userData) {
       this.user = this.authService.userData;
     }
   }
