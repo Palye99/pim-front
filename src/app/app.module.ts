@@ -14,6 +14,7 @@ import {FormsModule} from '@angular/forms';
 import {LoginComponent} from './components/login/login.component';
 import { PasswordComponent } from './components/password/password.component';
 import { EmailComponent } from './components/email/email.component';
+import {NgParticlesModule} from 'ng-particles';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { EmailComponent } from './components/email/email.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
     FormsModule,
+    NgParticlesModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
