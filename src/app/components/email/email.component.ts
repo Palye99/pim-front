@@ -3,11 +3,11 @@ import {AuthService} from '../../services/auth';
 import {User} from '../../models/user';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-email',
+  templateUrl: './email.component.html',
+  styleUrls: ['./email.component.css']
 })
-export class HomeComponent implements OnInit {
+export class EmailComponent implements OnInit {
   user: User;
 
   constructor(private authService: AuthService) { }
@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  signOut() {
-    this.authService.SignOut();
+  sendVerificationEmail() {
+    this.authService.SendVerificationMail();
   }
 }
