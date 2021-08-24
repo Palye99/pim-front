@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
+import {FormsModule} from '@angular/forms';
 
 const PAGES_COMPONENT = [
   LoginComponent
@@ -14,7 +15,8 @@ const PAGES_COMPONENT = [
   ],
   imports: [
     CommonModule,
-    LoginRoutingModule
+    LoginRoutingModule,
+    FormsModule
   ]
 })
 export class LoginModule { }
