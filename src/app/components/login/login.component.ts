@@ -10,9 +10,12 @@ export class LoginComponent implements OnInit {
   name: string;
   password: any;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService) {
+    // do nothing.
+  }
 
   ngOnInit(): void {
+    // do nothing.
   }
 
   signInGoogle() {

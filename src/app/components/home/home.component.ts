@@ -10,7 +10,9 @@ import {User} from '../../models/user';
 export class HomeComponent implements OnInit {
   user: User;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService) {
+    // do nothing.
+  }
 
   ngOnInit(): void {
     if (this.authService && this.authService.userData) {
