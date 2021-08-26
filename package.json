@@ -20,10 +20,13 @@
     "@angular/platform-browser": "~11.2.6",
     "@angular/platform-browser-dynamic": "~11.2.6",
     "@angular/router": "~11.2.6",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "bootstrap": "^5.1.0",
     "firebase": "^8.10.0",
+    "ng-particles": "^2.17.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "tsparticles": "^1.34.0",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
