@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title">Sign Up</h5>
+  </div>
+
+  <div class="card-body">
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <input type="email" class="m-1" placeholder="Email Address" [(ngModel)]="email" required>
+        <input type="password" class="m-1" placeholder="Password" [(ngModel)]="password" required>
+        <button type="button" class="btn btn-primary m-1" (click)="signUp()">Sign Up</button>
+      </li>
+
+      <li class="list-group-item">
+        <button type="button" class="btn btn-primary" (click)="googleAuth()"><i class="fab fa-google"></i> Continue with Google</button>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="card-footer">
+    <button type="button" class="btn btn-info" routerLink="/login">Log In</button>
+  </div>
+</div>
