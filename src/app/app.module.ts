@@ -15,6 +15,10 @@ import {LoginComponent} from './components/login/login.component';
 import { PasswordComponent } from './components/password/password.component';
 import { EmailComponent } from './components/email/email.component';
 import {NgParticlesModule} from 'ng-particles';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PopupComponent } from './components/popup/popup.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,8 @@ import {NgParticlesModule} from 'ng-particles';
     RegisterComponent,
     LoginComponent,
     PasswordComponent,
-    EmailComponent
+    EmailComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,10 @@ import {NgParticlesModule} from 'ng-particles';
     AngularFireAuthModule,
     AngularFirestoreModule,
     FormsModule,
-    NgParticlesModule
+    NgParticlesModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatFormFieldModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
