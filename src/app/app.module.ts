@@ -20,6 +20,8 @@ import { PopupComponent } from './components/popup/popup.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {HttpClientModule} from '@angular/common/http';
+import {HomeComponent} from './components/home/home.component';
+import {NgTerminalModule} from 'ng-terminal';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import {HttpClientModule} from '@angular/common/http';
     LoginComponent,
     PasswordComponent,
     EmailComponent,
-    PopupComponent
+    PopupComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     MatDialogModule,
     MatFormFieldModule,
-    HttpClientModule
+    HttpClientModule,
+    NgTerminalModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
