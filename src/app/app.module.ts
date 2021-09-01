@@ -19,6 +19,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopupComponent } from './components/popup/popup.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {HttpClientModule} from '@angular/common/http';
+import {HomeComponent} from './components/home/home.component';
+import {NgTerminalModule} from 'ng-terminal';
+import {TerminalComponent} from './components/terminal/terminal.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     LoginComponent,
     PasswordComponent,
     EmailComponent,
-    PopupComponent
+    PopupComponent,
+    HomeComponent,
+    TerminalComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +48,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     NgParticlesModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    MatFormFieldModule
+    MatTabsModule,
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    HttpClientModule,
+    NgTerminalModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
