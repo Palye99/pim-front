@@ -9,7 +9,15 @@ export class DockerService {
 
   constructor(private http: HttpClient) { }
 
-  dockerChoice(idChoice) {
+  dockerChoice(idChoice: number) {
     return this.http.get(`${environment.env_api_url}/docker/${idChoice}`);
+  }
+
+  shellCommand(command: string) {
+    return this.http.post(`${environment.env_api_url}/docker/command`, command);
+  }
+
+  dockerCommand(id: string, command: string) {
+    return this.http.post(`${environment.env_api_url}/docker/dockerCommand/${id}`, command);
   }
 }

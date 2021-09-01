@@ -46,23 +46,35 @@
   <mat-tab-group *ngIf="containerJava || containerJS || containerBash || containerPython">
 
     <mat-tab label="Java" *ngIf="containerJava">
-      <mat-spinner *ngIf="isLoadingJava"></mat-spinner>
-      <ng-terminal *ngIf="!isLoadingJava"></ng-terminal>
+      <app-terminal [container]="containerJava" [isLoading]="isLoadingJava"
+                    [firstCommande]="resultCommandJava" [firstError]="errorCommandeJava"
+                    [choixTerm]="1"></app-terminal>
+      <div *ngIf="errorJava" class="alert alert-danger" role="alert">Erreur lors du lancement du container</div>
+      <div *ngIf="errorCommandeJava && errorCommandeJava.length > 0" class="alert alert-warning" role="alert">{{errorCommandeJava}}</div>
     </mat-tab>
 
     <mat-tab label="JavaScript" *ngIf="containerJS">
-      <mat-spinner *ngIf="isLoadingJS"></mat-spinner>
-      <ng-terminal *ngIf="!isLoadingJS"></ng-terminal>
+      <app-terminal [container]="containerJS" [isLoading]="isLoadingJS"
+                    [firstCommande]="resultCommandJS" [firstError]="errorCommandeJS"
+                    [choixTerm]="2"></app-terminal>
+      <div *ngIf="errorJS" class="alert alert-danger" role="alert">Erreur lors du lancement du container</div>
+      <div *ngIf="errorCommandeJS && errorCommandeJS.length > 0" class="alert alert-warning" role="alert">{{errorCommandeJS}}</div>
     </mat-tab>
 
     <mat-tab label="Bash" *ngIf="containerBash">
-      <mat-spinner *ngIf="isLoadingBash"></mat-spinner>
-      <ng-terminal *ngIf="!isLoadingBash"></ng-terminal>
+      <app-terminal [container]="containerBash" [isLoading]="isLoadingBash"
+                    [firstCommande]="resultCommandBash" [firstError]="errorCommandeBash"
+                    [choixTerm]="3"></app-terminal>
+      <div *ngIf="errorBash" class="alert alert-danger" role="alert">Erreur lors du lancement du container</div>
+      <div *ngIf="errorCommandeBash && errorCommandeBash.length > 0" class="alert alert-warning" role="alert">{{errorCommandeBash}}</div>
     </mat-tab>
 
     <mat-tab label="Python" *ngIf="containerPython">
-      <mat-spinner *ngIf="isLoadingPython"></mat-spinner>
-      <ng-terminal *ngIf="!isLoadingPython"></ng-terminal>
+      <app-terminal [container]="containerPython" [isLoading]="isLoadingPython"
+                    [firstCommande]="resultCommandPython" [firstError]="errorCommandePython"
+                    [choixTerm]="4"></app-terminal>
+      <div *ngIf="errorPython" class="alert alert-danger" role="alert">Erreur lors du lancement du container</div>
+      <div *ngIf="errorCommandePython && errorCommandePython.length > 0" class="alert alert-warning" role="alert">{{errorCommandePython}}</div>
     </mat-tab>
 
   </mat-tab-group>
