@@ -25,7 +25,7 @@
   </div>
 </nav>
 
-<div class="container" style="vertical-align: middle">
+<div class="container">
   <div class="row">
     <div class="col-sm test" (click)="choice(1)">
       <img src="assets/java.svg" alt="java_logo" style="width: 50%">
@@ -36,6 +36,34 @@
     <div class="col-sm test" (click)="choice(3)">
       <img src="assets/bash-icon.svg" alt="bash_logo">
     </div>
+    <div class="col-sm test" (click)="choice(4)">
+      <img src="assets/python.svg" alt="python_logo">
+    </div>
   </div>
-  <ng-terminal></ng-terminal>
+</div>
+
+<div class="container mt-5 border-dark">
+  <mat-tab-group *ngIf="containerJava || containerJS || containerBash || containerPython">
+
+    <mat-tab label="Java" *ngIf="containerJava">
+      <mat-spinner *ngIf="isLoadingJava"></mat-spinner>
+      <ng-terminal *ngIf="!isLoadingJava"></ng-terminal>
+    </mat-tab>
+
+    <mat-tab label="JavaScript" *ngIf="containerJS">
+      <mat-spinner *ngIf="isLoadingJS"></mat-spinner>
+      <ng-terminal *ngIf="!isLoadingJS"></ng-terminal>
+    </mat-tab>
+
+    <mat-tab label="Bash" *ngIf="containerBash">
+      <mat-spinner *ngIf="isLoadingBash"></mat-spinner>
+      <ng-terminal *ngIf="!isLoadingBash"></ng-terminal>
+    </mat-tab>
+
+    <mat-tab label="Python" *ngIf="containerPython">
+      <mat-spinner *ngIf="isLoadingPython"></mat-spinner>
+      <ng-terminal *ngIf="!isLoadingPython"></ng-terminal>
+    </mat-tab>
+
+  </mat-tab-group>
 </div>

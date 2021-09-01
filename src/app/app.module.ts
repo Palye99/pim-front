@@ -22,6 +22,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {HttpClientModule} from '@angular/common/http';
 import {HomeComponent} from './components/home/home.component';
 import {NgTerminalModule} from 'ng-terminal';
+import {TerminalComponent} from './components/terminal/terminal.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import {NgTerminalModule} from 'ng-terminal';
     PasswordComponent,
     EmailComponent,
     PopupComponent,
-    HomeComponent
+    HomeComponent,
+    TerminalComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +48,8 @@ import {NgTerminalModule} from 'ng-terminal';
     NgParticlesModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    MatTabsModule,
+    MatProgressSpinnerModule,
     MatFormFieldModule,
     HttpClientModule,
     NgTerminalModule
