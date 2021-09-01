@@ -15,6 +15,16 @@ import {LoginComponent} from './components/login/login.component';
 import { PasswordComponent } from './components/password/password.component';
 import { EmailComponent } from './components/email/email.component';
 import {NgParticlesModule} from 'ng-particles';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PopupComponent } from './components/popup/popup.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {HttpClientModule} from '@angular/common/http';
+import {HomeComponent} from './components/home/home.component';
+import {NgTerminalModule} from 'ng-terminal';
+import {TerminalComponent} from './components/terminal/terminal.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -22,7 +32,10 @@ import {NgParticlesModule} from 'ng-particles';
     RegisterComponent,
     LoginComponent,
     PasswordComponent,
-    EmailComponent
+    EmailComponent,
+    PopupComponent,
+    HomeComponent,
+    TerminalComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +45,14 @@ import {NgParticlesModule} from 'ng-particles';
     AngularFireAuthModule,
     AngularFirestoreModule,
     FormsModule,
-    NgParticlesModule
+    NgParticlesModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatTabsModule,
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    HttpClientModule,
+    NgTerminalModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

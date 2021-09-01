@@ -10,9 +10,12 @@ export class RegisterComponent implements OnInit {
   email: string;
   password: any;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService) {
+    // do nothing.
+  }
 
   ngOnInit(): void {
+    // do nothing.
   }
 
   signUp() {
