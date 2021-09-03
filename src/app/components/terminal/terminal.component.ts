@@ -40,10 +40,13 @@ export class TerminalComponent implements OnInit, AfterViewInit {
 
   async ngAfterViewInit() {
 
-    await new Promise(f => setTimeout(f, 1000));
+    await new Promise(f => setTimeout(f, 2000));
 
     this.child.write('\r\n$ ');
-    this.child.write(this.firstCommande);
+
+    await new Promise(f => setTimeout(f, 8000));
+
+    this.child.write(this.firstCommande.substring(4));
     this.child.write('\r\n$ ');
 
     this.child.keyEventInput.subscribe(e => {
@@ -70,7 +73,7 @@ export class TerminalComponent implements OnInit, AfterViewInit {
             this.child.write('\r\n$ ');
           });
         } else {
-          this.dockerService.dockerCommand(this.firstCommande.trim(), this.commandToSend).subscribe((value: ResultCommand) => {
+          this.dockerService.dockerCommand(this.choixTerm, this.firstCommande.trim().substring(4), this.commandToSend).subscribe((value: ResultCommand) => {
             if (value.result && value.result.length > 0) {
               this.child.write('\r\n ');
               this.child.write(value.result);
